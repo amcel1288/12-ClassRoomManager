@@ -1,0 +1,30 @@
+<div class="container-fluid" style="margin:15px;">
+	<button ui-sref="class.detail" class="btn btn-primary" style="float: right;">Add Class</button>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Teacher</th>
+			<th>Start Date</th>
+			<th>End Date</th>
+			<th>Students</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="class in classGridCtrl.classes">
+			<td>{{class.name}}</td>
+			<td>{{class.teacher.firstName + " "+ class.teacher.lastName}}</td>
+			<td>{{class.startDate}}</td>
+			<td>{{class.endDate}}</td>
+			<td style="text-align: center;">5</td>
+			<td>
+				<button ng-click="classGridCtrl.deleteClass(class)" class="btn btn-danger" style="float:right;">x</button>
+				<button ui-sref="class.detail({id:{{class.classId}}})" class="btn btn-primary" style="float:right; margin-right: 1em;">edit</button>
+			</td>
+		</tr>	
+	</tbody>
+</table>
+</div>
+
+	

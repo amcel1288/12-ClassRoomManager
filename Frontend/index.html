@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Classroom Manager</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+		
+	</head>
+	<body>
+		<!-- Navbar -->
+	    <div class="navbar navbar-inverse">
+	        <div class="container-fluid">
+	            <a class="navbar-brand" href="#">Classroom Manager</a>
+	            <ul class="nav navbar-nav">
+	                <li class="active">
+	                    <a ui-sref="home">Home</a>
+	                </li>
+	                <li>
+	                    <a ui-sref="class.grid">Classes</a>
+	                </li>
+	                <li>
+	                    <a ui-sref="student.grid">Students</a>
+	                </li>
+	                <li>
+	                    <a ui-sref="teacher.grid">Teachers</a>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	  <div class="container">
+	    
+	  </div>
+
+	  <div ui-view>
+	  	
+	  </div>
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="app/app.module.js"></script>
+		<script src="app/home/home.controller.js"></script>
+		<script src="app/class/class.detail.controller.js"></script>
+		<script src="app/class/class.grid.controller.js"></script>
+		<script src="app/student/student.detail.controller.js"></script>
+		<script src="app/student/student.grid.controller.js"></script>
+		<script src="app/teacher/teacher.detail.controller.js"></script>
+		<script src="app/teacher/teacher.grid.controller.js"></script>
+		<script src="app/core/class.factory.js"></script>
+		<script src="app/core/student.factory.js"></script>
+		<script src="app/core/teacher.factory.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<div class="container-fluid" style="margin:15px;">
+	<button ui-sref="teacher.detail" class="btn btn-primary" style="float: right;">Add Teacher</button>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>first+last</th>
+			<th>email</th>
+			<th>telephone</th>
+			<th>classes</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="teacher in teacherGridCtrl.teachers">
+			<td>{{teacher.firstName + " " + teacher.lastName}}</td>
+			<td>{{teacher.emailAddress}}</td>
+			<td>{{teacher.telephone}}</td>
+			<td style="text-align: center;">{{}}</td>
+			<td>
+				<button ng-click="teacherGridCtrl.deleteTeacher(teacher)" class="btn btn-danger" style="float:right;">x</button>
+				<button ui-sref="teacher.detail({id:{{teacher.teacherId}}})" class="btn btn-primary" style="float:right; margin-right: 1em;">edit</button>
+			</td>
+		</tr>	
+	</tbody>
+</table>
+</div>
+
+	
